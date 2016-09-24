@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stop Watch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMy-7j-z54">
+                                <rect key="frame" x="20" y="28" width="560" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYZ-wp-t7H">
+                                <rect key="frame" x="262.5" y="177" width="75" height="75"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="C9H-8q-stw"/>
+                                    <constraint firstAttribute="width" constant="75" id="aTm-on-oER"/>
+                                    <constraint firstAttribute="width" secondItem="OYZ-wp-t7H" secondAttribute="height" multiplier="1:1" id="hpI-QP-9R8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="37.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hpI-QP-9R8"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x4I-k6-OGu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wR6-M9-IVo">
+                                <rect key="frame" x="356.5" y="177" width="75" height="75"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="37.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ac-t9-hDO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="42" translatesAutoresizingMaskIntoConstraints="NO" id="531-KC-PUE">
+                                <rect key="frame" x="20" y="68" width="560" height="101"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="84"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jw-G3-SAp">
+                                <rect key="frame" x="169" y="177" width="75" height="75"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="37.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aOc-iH-Y7A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wR6-M9-IVo" firstAttribute="centerY" secondItem="OYZ-wp-t7H" secondAttribute="centerY" id="0E0-aJ-oGi"/>
+                            <constraint firstItem="OYZ-wp-t7H" firstAttribute="width" secondItem="1jw-G3-SAp" secondAttribute="width" id="BYq-yx-iuC"/>
+                            <constraint firstItem="1jw-G3-SAp" firstAttribute="centerY" secondItem="OYZ-wp-t7H" secondAttribute="centerY" id="EU3-Vn-56R"/>
+                            <constraint firstItem="531-KC-PUE" firstAttribute="top" secondItem="hMy-7j-z54" secondAttribute="bottom" constant="8" symbolic="YES" id="F6F-d4-Lti"/>
+                            <constraint firstItem="OYZ-wp-t7H" firstAttribute="leading" secondItem="1jw-G3-SAp" secondAttribute="trailing" constant="18" id="JMx-zt-VdZ"/>
+                            <constraint firstItem="wR6-M9-IVo" firstAttribute="leading" secondItem="OYZ-wp-t7H" secondAttribute="trailing" constant="19" id="NwB-GB-gV7"/>
+                            <constraint firstItem="OYZ-wp-t7H" firstAttribute="centerX" secondItem="531-KC-PUE" secondAttribute="centerX" id="O1x-PZ-j0R"/>
+                            <constraint firstItem="OYZ-wp-t7H" firstAttribute="top" secondItem="531-KC-PUE" secondAttribute="bottom" constant="8" symbolic="YES" id="Ody-NB-Xw4"/>
+                            <constraint firstItem="OYZ-wp-t7H" firstAttribute="height" secondItem="1jw-G3-SAp" secondAttribute="height" id="Ojm-uY-e3z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="531-KC-PUE" secondAttribute="trailing" id="PFv-vM-abx"/>
+                            <constraint firstItem="wR6-M9-IVo" firstAttribute="width" secondItem="OYZ-wp-t7H" secondAttribute="width" id="V7N-CJ-DcK"/>
+                            <constraint firstItem="wR6-M9-IVo" firstAttribute="height" secondItem="OYZ-wp-t7H" secondAttribute="height" id="Y8i-sU-OOf"/>
+                            <constraint firstItem="hMy-7j-z54" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zmz-Sk-k6y"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="531-KC-PUE" secondAttribute="leading" id="gpa-en-LAF"/>
+                            <constraint firstItem="531-KC-PUE" firstAttribute="centerX" secondItem="hMy-7j-z54" secondAttribute="centerX" id="r1E-3l-lvK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hMy-7j-z54" secondAttribute="trailing" id="rpK-7k-EBC"/>
+                            <constraint firstItem="hMy-7j-z54" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="xOt-cf-bb4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resetButton" destination="wR6-M9-IVo" id="HgI-Jr-Vhp"/>
+                        <outlet property="startButton" destination="1jw-G3-SAp" id="G3p-zW-qzj"/>
+                        <outlet property="stopButton" destination="OYZ-wp-t7H" id="f4W-eJ-8bK"/>
+                        <outlet property="timeLabel" destination="531-KC-PUE" id="V1O-xB-oyi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="307"/>
+        </scene>
+    </scenes>
+</document>
